@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatic Moving Image Advertisement</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #ad-container {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    #ad {
+      position: absolute;
+      width: 200px; /* Adjust the image size */
+      height: 150px; /* Adjust the image size */
+      animation: moveAd 15s linear infinite; /* Slower transition */
+    }
+
+    @keyframes moveAd {
+      0% {
+        top: 0%;
+        left: 100%;
+      }
+      20% {
+        top: 0%;
+        left: 50%;
+      }
+      40% {
+        top: 50%;
+        left: 50%;
+      }
+      60% {
+        top: 100%;
+        left: 50%;
+      }
+      80% {
+        top: 100%;
+        left: 0%;
+      }
+      100% {
+        top: 0%;
+        left: 0%;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+<nav>
+  Advertisement
+</nav>
+
+<h1>Testing Multi-Directional Animated Ad</h1>
+
+<div id="ad-container">
+  <div id="ad">
+    <img src="WhatsApp Image 2025-03-26 at 10.05.19 AM.jpeg" alt="Advertisement">
+  </div>
+</div>
+
+</body>
+</html>
